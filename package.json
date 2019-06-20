@@ -7,15 +7,17 @@
     "prebuild": "tslint -c tslint.json -p tsconfig.json --fix",
     "build": "tsc -p .",
     "prestart": "npm run build",
-    "start": "ts-node --inspect=5858 src/index.ts",
+    "start": "node dist/app.js",
     "test": "echo \"Error: no test specified\" && exit 1",
-    "dev": "nodemon"
+    "dev": "ts-node-dev --respawn --transpileOnly src/app.ts",
+    "tsc": "tsc"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "express": "^4.16.4"
+    "express": "^4.16.4",
+    "ts-node-dev": "^1.0.0-pre.40"
   },
   "devDependencies": {
     "@types/es6-promise": "^3.3.0",
