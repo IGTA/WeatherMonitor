@@ -1,4 +1,6 @@
 import express = require('express');
+import { sequelize } from './sequelize';
+
 const app = express();
 const port = 3000; // default port to listen
 
@@ -14,6 +16,11 @@ app.get('/test', (req: any, res: any) => {
         date: new Date(),
     });
 });
+
+sequelize.sync()
+    .then(() => {
+        console.log("db sync");
+    });
 
 // start the Express server
 app.listen(port, () => {

@@ -17,7 +17,13 @@
   "license": "ISC",
   "dependencies": {
     "express": "^4.16.4",
-    "ts-node-dev": "^1.0.0-pre.40"
+    "ts-node-dev": "^1.0.0-pre.40",
+    "@types/bluebird": "^3.5.27",
+    "@types/validator": "^10.11.1",
+    "pg": "^7.11.0",
+    "pg-hstore": "^2.3.3",
+    "sequelize": "^5.9.1",
+    "sequelize-cli": "^5.5.0"
   },
   "devDependencies": {
     "@types/es6-promise": "^3.3.0",
